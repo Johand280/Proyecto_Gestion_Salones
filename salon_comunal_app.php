@@ -49,6 +49,58 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);min
 .btn-success:hover{opacity:0.85}
 .btn-warn{background:var(--warn);color:#fff}
 .btn-warn:hover{opacity:0.85}
+.btn-info{background:rgba(79,156,249,0.15);color:var(--accent);border:1px solid rgba(79,156,249,0.3)}
+.btn-info:hover{background:rgba(79,156,249,0.25)}
+.btn-sm{padding:6px 14px;font-size:12px}
+.filter-input{background:var(--bg3);border:1px solid var(--border);border-radius:var(--radius-sm);padding:8px 14px;color:var(--text);font-size:13px;font-family:inherit;outline:none;transition:border-color 0.2s}
+.filter-input:focus{border-color:var(--accent)}
+.filter-input::placeholder{color:var(--text3)}
+.hint-box{background:rgba(79,156,249,0.07);border:1px solid rgba(79,156,249,0.2);border-radius:var(--radius-sm);padding:12px 16px;margin-bottom:20px;font-size:13px;color:var(--text2)}
+.report-btn{background:var(--bg3);border:1px solid var(--border2);border-radius:var(--radius);padding:20px;cursor:pointer;transition:all 0.2s;text-align:left;display:flex;align-items:center;gap:16px;width:100%}
+.report-btn:hover{border-color:var(--accent);background:rgba(79,156,249,0.06);transform:translateY(-2px)}
+.report-icon{font-size:28px}
+.report-name{font-weight:600;font-size:14px;margin-bottom:4px;color:var(--text)}
+.report-desc{font-size:12px;color:var(--text2)}
+.reports-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px}
+.notif-bell{position:relative;cursor:pointer;padding:8px;border-radius:8px;transition:background 0.2s;font-size:18px}
+.notif-bell:hover{background:var(--bg3)}
+.notif-dot{position:absolute;top:6px;right:6px;width:8px;height:8px;background:var(--danger);border-radius:50%;border:2px solid var(--card)}
+.notif-panel{position:fixed;top:64px;right:0;width:340px;max-height:calc(100vh - 64px);background:var(--card);border-left:1px solid var(--border);overflow-y:auto;z-index:500;transform:translateX(100%);transition:transform 0.3s ease;box-shadow:-8px 0 24px rgba(0,0,0,0.3)}
+.notif-panel.open{transform:translateX(0)}
+.notif-panel-header{padding:16px 20px;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center}
+.notif-panel-title{font-weight:600;font-size:14px}
+.notif-item{padding:16px 20px;border-bottom:1px solid var(--border);cursor:pointer;transition:background 0.15s}
+.notif-item:hover{background:var(--bg3)}
+.notif-item-title{font-size:13px;font-weight:500;margin-bottom:4px}
+.notif-item-body{font-size:12px;color:var(--text2)}
+.notif-item-time{font-size:11px;color:var(--text3);margin-top:4px}
+.notif-item.unread{border-left:3px solid var(--accent)}
+.notif-item.unread .notif-item-title{color:var(--accent)}
+.timeline{position:relative;padding-left:28px}
+.timeline::before{content:'';position:absolute;left:8px;top:0;bottom:0;width:2px;background:var(--border2);border-radius:2px}
+.timeline-item{position:relative;padding-bottom:20px}
+.timeline-item::before{content:'';position:absolute;left:-24px;top:4px;width:12px;height:12px;border-radius:50%;border:2px solid var(--border2);background:var(--bg2)}
+.timeline-item.tl-success::before{border-color:var(--accent3);background:rgba(16,185,129,0.15)}
+.timeline-item.tl-danger::before{border-color:var(--danger);background:rgba(239,68,68,0.15)}
+.timeline-item.tl-info::before{border-color:var(--accent);background:rgba(79,156,249,0.15)}
+.timeline-item.tl-warn::before{border-color:var(--accent4);background:rgba(245,158,11,0.15)}
+.timeline-time{font-size:11px;color:var(--text3);margin-bottom:4px}
+.timeline-text{font-size:13px;color:var(--text);line-height:1.5}
+.timeline-meta{font-size:11px;color:var(--text2);margin-top:2px}
+.stars{display:flex;gap:4px;cursor:pointer}
+.star{font-size:20px;color:var(--text3);transition:color 0.15s}
+.star.filled{color:var(--accent4)}
+.star:hover,.star:hover~.star{color:var(--accent4)}
+.stars:hover .star{color:var(--accent4)}
+.stars .star:hover~.star{color:var(--text3)}
+.rating-card{background:var(--bg3);border:1px solid var(--border);border-radius:var(--radius);padding:16px;margin-bottom:12px}
+.rating-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px}
+.rating-user{font-size:13px;font-weight:500}
+.rating-date{font-size:11px;color:var(--text3)}
+.rating-comment{font-size:13px;color:var(--text2);margin-top:8px;line-height:1.5}
+.rating-stars-display{display:flex;gap:2px;margin-top:4px}
+.rstar{font-size:14px}
+.hint-box{background:rgba(79,156,249,0.07);border:1px solid rgba(79,156,249,0.2);border-radius:var(--radius-sm);padding:12px 16px;margin-bottom:20px;font-size:13px;color:var(--text2)}
 .btn-sm{padding:6px 14px;font-size:12px}
 .login-switch{text-align:center;margin-top:20px;font-size:13px;color:var(--text2)}
 .login-switch a{color:var(--accent);cursor:pointer;text-decoration:none}
@@ -126,7 +178,7 @@ tr:hover td{background:var(--bg3)}
 .badge-inactive{background:rgba(75,85,99,0.3);color:var(--text2)}
 
 /* ===== SEMAPHORE ===== */
-.semaphore-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px;margin-top:16px}
+.semaphore-grid{display:grid;grid-template-columns:auto-fill;gap:16px;margin-top:16px}
 .sem-card{background:var(--bg3);border-radius:var(--radius);padding:16px;border-left:4px solid}
 .sem-red{border-color:#ef4444}
 .sem-amber{border-color:#f59e0b}
@@ -166,7 +218,13 @@ tr:hover td{background:var(--bg3)}
 
 /* ===== FILTERS ===== */
 .filter-bar{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:20px;align-items:center}
+.filter-label{font-size:12px;color:var(--text2);letter-spacing:0.5px;text-transform:uppercase}
 .filter-select{background:var(--bg3);border:1px solid var(--border);border-radius:var(--radius-sm);padding:8px 14px;color:var(--text);font-size:13px;font-family:inherit;outline:none;cursor:pointer}
+
+.alert-panel{background:rgba(249,115,22,0.08);border:1px solid rgba(249,115,22,0.24);border-radius:var(--radius-sm);padding:16px;margin-bottom:20px}
+.alert-title{font-weight:600;color:var(--accent4);margin-bottom:4px}
+.alert-text{font-size:13px;color:var(--text2);margin-bottom:8px}
+.alert-meta{font-size:12px;color:var(--text);}
 
 /* ===== NOTIFICATION ===== */
 .notif{position:fixed;top:80px;right:24px;background:var(--bg2);border:1px solid var(--border2);border-radius:var(--radius-sm);padding:14px 18px;font-size:13px;z-index:2000;max-width:320px;animation:slideIn 0.3s ease;box-shadow:0 8px 32px rgba(0,0,0,0.4)}
@@ -279,6 +337,7 @@ canvas{max-width:100%;height:220px !important}
       <span id="topRoleBadge" class="role-tag"></span>
     </div>
     <div class="user-badge">
+      <div class="notif-bell" id="notifBell" onclick="toggleNotifPanel()" title="Notificaciones">🔔<span class="notif-dot" id="notifDot" style="display:none"></span></div>
       <div class="user-info">
         <div class="user-name" id="topUserName"></div>
         <div class="user-role" id="topUserRole"></div>
@@ -288,24 +347,39 @@ canvas{max-width:100%;height:220px !important}
     </div>
   </div>
 
+  <div class="notif-panel" id="notifPanel">
+    <div class="notif-panel-header">
+      <div class="notif-panel-title">🔔 Notificaciones</div>
+      <button class="btn btn-secondary btn-sm" onclick="marcarTodasLeidas()">Marcar todas leídas</button>
+    </div>
+    <div id="notifList"></div>
+  </div>
+
   <div class="app-body">
     <!-- SIDEBAR -->
     <div class="sidebar">
       <div class="nav-section">
         <div class="nav-section-title">Principal</div>
-        <div class="nav-item active" onclick="goPanel('dashboard')"><span class="nav-icon">📊</span> Dashboard</div>
-        <div class="nav-item" onclick="goPanel('reservas')"><span class="nav-icon">📅</span> Mis Reservas</div>
-        <div class="nav-item" onclick="goPanel('nuevaReserva')"><span class="nav-icon">➕</span> Nueva Reserva</div>
+        <div class="nav-item active" id="nav-dashboard" onclick="goPanel('dashboard')"><span class="nav-icon">📊</span> Dashboard</div>
+        <div class="nav-item" id="nav-reservas" onclick="goPanel('reservas')"><span class="nav-icon">📅</span> Mis Reservas</div>
+        <div class="nav-item" id="nav-nuevaReserva" onclick="goPanel('nuevaReserva')"><span class="nav-icon">➕</span> Nueva Reserva</div>
+        <div class="nav-item" id="nav-calendario" onclick="goPanel('calendario')"><span class="nav-icon">🗓️</span> Calendario</div>
       </div>
       <div class="nav-section" id="navAdmin">
         <div class="nav-section-title">Administración</div>
-        <div class="nav-item" onclick="goPanel('todasReservas')"><span class="nav-icon">📋</span> Todas las Reservas <span class="nav-badge" id="pendingBadge" style="display:none">0</span></div>
-        <div class="nav-item" onclick="goPanel('usuarios')"><span class="nav-icon">👥</span> Usuarios</div>
-        <div class="nav-item" onclick="goPanel('inventario')"><span class="nav-icon">📦</span> Inventario</div>
+        <div class="nav-item" id="nav-todasReservas" onclick="goPanel('todasReservas')"><span class="nav-icon">📋</span> Todas las Reservas <span class="nav-badge" id="pendingBadge" style="display:none">0</span></div>
+        <div class="nav-item" id="nav-usuarios" onclick="goPanel('usuarios')"><span class="nav-icon">👥</span> Usuarios</div>
+        <div class="nav-item" id="nav-inventario" onclick="goPanel('inventario')"><span class="nav-icon">📦</span> Inventario</div>
+        <div class="nav-item" id="nav-semaforo" onclick="goPanel('semaforo')"><span class="nav-icon">🚦</span> Semáforo</div>
+        <div class="nav-item" id="nav-informes" onclick="goPanel('informes')"><span class="nav-icon">📄</span> Informes</div>
+        <div class="nav-item" id="nav-bitacora" onclick="goPanel('bitacora')"><span class="nav-icon">🧾</span> Bitácora</div>
+        <div class="nav-item" id="nav-historialAdmin" onclick="goPanel('historialAdmin')"><span class="nav-icon">📜</span> Historial Global</div>
       </div>
       <div class="nav-section">
         <div class="nav-section-title">Mi Cuenta</div>
-        <div class="nav-item" onclick="goPanel('perfil')"><span class="nav-icon">👤</span> Perfil</div>
+        <div class="nav-item" id="nav-perfil" onclick="goPanel('perfil')"><span class="nav-icon">👤</span> Perfil</div>
+        <div class="nav-item" id="nav-miHistorial" onclick="goPanel('miHistorial')"><span class="nav-icon">📝</span> Mi Historial</div>
+        <div class="nav-item" id="nav-calificaciones" onclick="goPanel('calificaciones')"><span class="nav-icon">⭐</span> Calificaciones</div>
       </div>
     </div>
 
@@ -330,6 +404,7 @@ canvas{max-width:100%;height:220px !important}
           </div>
         </div>
         <div id="dashSemaforo"></div>
+        <div id="dashInventarioAlerta"></div>
       </div>
 
       <!-- MIS RESERVAS -->
@@ -344,9 +419,11 @@ canvas{max-width:100%;height:220px !important}
             <option value="pendiente">Pendiente</option>
             <option value="aprobada">Aprobada</option>
             <option value="rechazada">Rechazada</option>
+            <option value="cancelada">Cancelada</option>
           </select>
+          <input type="text" class="filter-input" id="buscarMisReservas" placeholder="🔍 Buscar evento..." oninput="renderMisReservas()" style="width:200px">
         </div>
-        <div class="table-wrapper"><table><thead><tr><th>Fecha</th><th>Evento</th><th>Asistentes</th><th>Estado</th><th>Insumos</th><th>Observaciones</th></tr></thead><tbody id="tbodyMisReservas"></tbody></table></div>
+        <div class="table-wrapper"><table><thead><tr><th>Fecha</th><th>Evento</th><th>Asistentes</th><th>Estado</th><th>Insumos</th><th>Observaciones</th><th>Acciones</th></tr></thead><tbody id="tbodyMisReservas"></tbody></table></div>
       </div>
 
       <!-- NUEVA RESERVA -->
@@ -357,6 +434,10 @@ canvas{max-width:100%;height:220px !important}
         </div>
         <div class="card" style="max-width:600px">
           <div id="reservaError" class="error-msg" style="display:none"></div>
+          <div class="form-group" id="grupoResidenteAdmin" style="display:none">
+            <label class="form-label">🧑‍🤝‍🧑 Reservar para residente</label>
+            <select id="resResidente" class="form-select"><option value="">— Yo mismo —</option></select>
+          </div>
           <div class="form-group">
             <label class="form-label">Fecha del evento <span style="color:var(--accent4);font-size:11px">(mín. 48h · máx. 90 días)</span></label>
             <input type="date" id="resDate" class="form-input" onchange="checkDisponibilidad()">
@@ -368,8 +449,38 @@ canvas{max-width:100%;height:220px !important}
               <input type="text" id="resNombre" class="form-input" placeholder="Cumpleaños, reunión...">
             </div>
             <div class="form-group">
+              <label class="form-label">Tipo de evento</label>
+              <select id="resTipo" class="form-select">
+                <option value="cumpleanos">🎉 Cumpleaños</option>
+                <option value="reunion">🧑‍💼 Reunión</option>
+                <option value="asamblea">📢 Asamblea</option>
+                <option value="fiesta">🎊 Fiesta</option>
+                <option value="baby_shower">👶 Baby Shower</option>
+                <option value="graduacion">🎓 Graduación</option>
+                <option value="otro">📌 Otro</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
               <label class="form-label">N° de asistentes</label>
               <input type="number" id="resAsistentes" class="form-input" placeholder="Ej: 20" min="1" max="100">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Hora inicio</label>
+              <select id="resHora" class="form-select">
+                <option value="12:00">12:00 (mediodía)</option>
+                <option value="13:00">13:00</option>
+                <option value="14:00">14:00</option>
+                <option value="15:00">15:00</option>
+                <option value="16:00">16:00</option>
+                <option value="17:00">17:00</option>
+                <option value="18:00">18:00</option>
+                <option value="19:00">19:00</option>
+                <option value="20:00">20:00</option>
+                <option value="21:00">21:00</option>
+                <option value="22:00">22:00 (máximo)</option>
+              </select>
             </div>
           </div>
           <div class="form-group">
@@ -398,15 +509,28 @@ canvas{max-width:100%;height:220px !important}
           ℹ️ Las reservas <b>pendientes</b> pueden ser <span style="color:#6ee7b7">aprobadas</span> o <span style="color:#fca5a5">rechazadas</span>. Haz clic en <b>Gestionar</b> para revisar el detalle y tomar acción.
         </div>
         <div class="filter-bar">
+          <label class="filter-label">Filtro colaborador</label>
+          <select class="filter-select" onchange="renderTodasReservas()" id="filtroColaborador">
+            <option value="all">Todos</option>
+            <option value="principal">Titular</option>
+            <option value="junto">Acompañante</option>
+          </select>
+          <label class="filter-label">Estado</label>
           <select class="filter-select" onchange="renderTodasReservas()" id="filtroEstado">
             <option value="all">Todos</option>
             <option value="pendiente">Pendientes</option>
             <option value="aprobada">Aprobadas</option>
             <option value="rechazada">Rechazadas</option>
           </select>
+          <label class="filter-label">Periodo</label>
           <select class="filter-select" onchange="renderTodasReservas()" id="filtroMes">
             <option value="all">Todo el período</option>
           </select>
+        </div>
+        <div class="alert-panel" id="panelInventarioAlerta">
+          <div class="alert-title">Estado del inventario</div>
+          <div class="alert-text">Mantén controlado el stock de artículos del salón. Los ítems marcados con alerta necesitan revisión urgente.</div>
+          <div class="alert-meta">Artículos críticos: <strong id="alertaInsumosCriticos">0</strong></div>
         </div>
         <div class="table-wrapper"><table><thead><tr><th>Fecha</th><th>Residente</th><th>Apto</th><th>Evento</th><th>Asistentes</th><th>Estado</th><th>Acciones</th></tr></thead><tbody id="tbodyTodasReservas"></tbody></table></div>
       </div>
@@ -427,6 +551,121 @@ canvas{max-width:100%;height:220px !important}
           <button class="btn btn-primary btn-sm" id="btnNuevoInsumo" onclick="openModal('modalInsumo')">+ Agregar Insumo</button>
         </div>
         <div class="inv-grid" id="inventarioGrid"></div>
+      </div>
+
+      <!-- SEMÁFORO -->
+      <div class="panel" id="panel-semaforo">
+        <div class="page-header">
+          <div class="page-title">Semáforo de Reservas</div>
+          <div class="page-subtitle">Alertas visuales según proximidad del evento</div>
+        </div>
+        <div class="sem-legend">
+          <div class="sem-legend-item"><span class="sem-dot dot-red"></span> Menos de 3 días (URGENTE)</div>
+          <div class="sem-legend-item"><span class="sem-dot dot-amber"></span> 3–7 días (PRÓXIMO)</div>
+          <div class="sem-legend-item"><span class="sem-dot dot-green"></span> Más de 7 días (OK)</div>
+        </div>
+        <div class="filter-bar">
+          <select class="filter-select" onchange="renderSemaforo()" id="filtroSemaforo">
+            <option value="all">Todos</option>
+            <option value="red">Solo urgentes</option>
+            <option value="amber">Solo próximos</option>
+            <option value="green">Solo OK</option>
+          </select>
+        </div>
+        <div class="semaphore-grid" id="semaforoGrid"></div>
+      </div>
+
+      <!-- INFORMES -->
+      <div class="panel" id="panel-informes">
+        <div class="page-header">
+          <div class="page-title">Centro de Informes</div>
+          <div class="page-subtitle">Descarga reportes en formato CSV</div>
+        </div>
+        <div class="hint-box">📥 Todos los informes se descargan en formato CSV compatible con Excel y Google Sheets.</div>
+        <div class="reports-grid">
+          <button class="report-btn" onclick="downloadReport('reservas')"><span class="report-icon">📆</span><div><div class="report-name">Reporte de Reservas</div><div class="report-desc">Todas las reservas con estado y detalles completos</div></div></button>
+          <button class="report-btn" onclick="downloadReport('usuarios')"><span class="report-icon">👥</span><div><div class="report-name">Reporte de Usuarios</div><div class="report-desc">Lista completa de residentes registrados</div></div></button>
+          <button class="report-btn" onclick="downloadReport('inventario')"><span class="report-icon">📦</span><div><div class="report-name">Reporte de Inventario</div><div class="report-desc">Estado actual de todos los insumos</div></div></button>
+          <button class="report-btn" onclick="downloadReport('pendientes')"><span class="report-icon">⏳</span><div><div class="report-name">Reservas Pendientes</div><div class="report-desc">Solo solicitudes por revisar</div></div></button>
+          <button class="report-btn" onclick="downloadReport('semaforo')"><span class="report-icon">🚦</span><div><div class="report-name">Alerta Semáforo</div><div class="report-desc">Reservas próximas a vencer con nivel de alerta</div></div></button>
+          <button class="report-btn" onclick="downloadReport('historial')"><span class="report-icon">📜</span><div><div class="report-name">Historial de Actividad</div><div class="report-desc">Log completo de acciones del sistema</div></div></button>
+        </div>
+        <div class="card">
+          <div class="card-title">Detalle del informe</div>
+          <div id="informesDetalle"></div>
+        </div>
+      </div>
+
+      <!-- BITÁCORA -->
+      <div class="panel" id="panel-bitacora">
+        <div class="page-header">
+          <div class="page-title">Bitácora & Analítica</div>
+          <div class="page-subtitle">Estadísticas interactivas del salón comunal</div>
+        </div>
+        <div class="filter-bar mb-20">
+          <select class="filter-select" onchange="renderBitacora()" id="bitacoraFiltroAnio"><option value="all">Todos los años</option></select>
+          <select class="filter-select" onchange="renderBitacora()" id="bitacoraFiltroEstado">
+            <option value="all">Todos los estados</option>
+            <option value="pendiente">Pendiente</option>
+            <option value="aprobada">Aprobada</option>
+            <option value="rechazada">Rechazada</option>
+          </select>
+          <select class="filter-select" onchange="renderBitacora()" id="bitacoraFiltroTipo">
+            <option value="all">Todos los tipos</option>
+            <option value="cumpleanos">Cumpleaños</option>
+            <option value="reunion">Reunión</option>
+            <option value="asamblea">Asamblea</option>
+            <option value="fiesta">Fiesta</option>
+            <option value="baby_shower">Baby Shower</option>
+            <option value="graduacion">Graduación</option>
+            <option value="otro">Otro</option>
+          </select>
+        </div>
+        <div class="stats-grid" id="bitacoraStats"></div>
+        <div class="charts-grid">
+          <div class="chart-box"><div class="chart-title">Reservas por mes</div><canvas id="chartBitMeses"></canvas></div>
+          <div class="chart-box"><div class="chart-title">Por tipo de evento</div><canvas id="chartBitEventos"></canvas></div>
+        </div>
+        <div class="charts-grid" style="margin-top:0">
+          <div class="chart-box"><div class="chart-title">Distribución por residente</div><canvas id="chartBitResidentes"></canvas></div>
+          <div class="chart-box"><div class="chart-title">Tendencia aprobación vs rechazo</div><canvas id="chartBitTendencia"></canvas></div>
+        </div>
+        <div class="chart-box" style="margin-top:0">
+          <div class="chart-title">Asistentes promedio por tipo de evento</div>
+          <canvas id="chartBitAsistentes" style="height:160px!important"></canvas>
+        </div>
+      </div>
+
+      <!-- HISTORIAL GLOBAL -->
+      <div class="panel" id="panel-historialAdmin">
+        <div class="page-header">
+          <div class="page-title">Historial Global de Actividad</div>
+          <div class="page-subtitle">Registro completo de todas las acciones del sistema</div>
+        </div>
+        <div class="filter-bar">
+          <select class="filter-select" onchange="renderHistorialAdmin()" id="filtroHistorialTipo">
+            <option value="all">Todos los eventos</option>
+            <option value="login">Inicios de sesión</option>
+            <option value="reserva">Reservas</option>
+            <option value="usuario">Usuarios</option>
+            <option value="inventario">Inventario</option>
+            <option value="aprobacion">Aprobaciones/Rechazos</option>
+          </select>
+          <select class="filter-select" onchange="renderHistorialAdmin()" id="filtroHistorialUsuario">
+            <option value="all">Todos los usuarios</option>
+          </select>
+          <input type="text" class="filter-input" id="buscarHistorial" placeholder="🔍 Buscar en historial..." oninput="renderHistorialAdmin()" style="width:200px">
+        </div>
+        <div id="historialAdminContainer"></div>
+      </div>
+
+      <!-- MI HISTORIAL -->
+      <div class="panel" id="panel-miHistorial">
+        <div class="page-header">
+          <div class="page-title">Mi Historial de Actividad</div>
+          <div class="page-subtitle">Registro personal de tus acciones en el sistema</div>
+        </div>
+        <div id="miHistorialContainer"></div>
       </div>
 
       <!-- PERFIL -->
@@ -697,10 +936,60 @@ async function cargarDatos() {
     inventarioLocales = inventario.inventario || [];
     
     updatePendingBadge();
+    ensureHistorialInicial();
   } catch (error) {
     console.error('Error al cargar datos:', error);
     showNotif('Error al cargar datos', 'error');
   }
+}
+
+function DBGet(key) {
+  if (key === 'reservas') return reservasLocales || [];
+  if (key === 'usuarios') return usuariosLocales || [];
+  if (key === 'inventario') return inventarioLocales || [];
+  if (key === 'historial') {
+    try {
+      return JSON.parse(localStorage.getItem('salonHistorial') || '[]');
+    } catch (e) {
+      return [];
+    }
+  }
+  return [];
+}
+
+function DBSaveHistorial(items) {
+  localStorage.setItem('salonHistorial', JSON.stringify(items));
+}
+
+function logActivity(tipo, titulo, descripcion, nivel = 'info') {
+  const historial = DBGet('historial');
+  historial.unshift({
+    id: 'hist_' + Date.now(),
+    fecha: new Date().toISOString(),
+    tipo,
+    titulo,
+    descripcion,
+    nivel,
+    usuario: currentUser ? currentUser.nombre : 'Sistema'
+  });
+  DBSaveHistorial(historial.slice(0, 300));
+}
+
+function ensureHistorialInicial() {
+  if (DBGet('historial').length > 0) return;
+  const historial = reservasLocales.map(r => {
+    const usuario = usuariosLocales.find(u => u.id === r.userId) || { nombre: 'Desconocido' };
+    return {
+      id: 'hist_reserva_' + r.id,
+      fecha: new Date(r.fecha + 'T12:00:00').toISOString(),
+      tipo: 'reserva',
+      titulo: `${usuario.nombre} / ${r.nombre}`,
+      descripcion: `Reserva ${r.estado} de ${r.tipo || 'otro'} con ${r.asistentes || 0} asistentes`,
+      nivel: r.estado === 'rechazada' ? 'danger' : r.estado === 'pendiente' ? 'warn' : 'success',
+      usuario: usuario.nombre
+    };
+  });
+  DBSaveHistorial(historial);
 }
 
 // ========== NAVIGATION ==========
@@ -719,12 +1008,16 @@ function goPanel(name) {
     dashboard: renderDashboard,
     reservas: renderMisReservas,
     todasReservas: () => { renderFiltrosMes(); renderTodasReservas(); },
+    semaforo: renderSemaforo,
+    informes: renderInformes,
+    bitacora: renderBitacora,
+    historialAdmin: renderHistorialAdmin,
+    miHistorial: renderMiHistorial,
     usuarios: renderUsuarios,
     inventario: renderInventario,
     perfil: renderPerfil,
     nuevaReserva: renderNuevaReserva
   };
-  
   if (renders[name]) renders[name]();
 }
 
@@ -757,6 +1050,7 @@ function renderDashboard() {
   
   document.getElementById('dashStats').innerHTML = statsHTML;
   renderDashCharts(reservasLocales);
+  renderDashboardSemaforo(reservasLocales);
 }
 
 function statCard(c, icon, val, label) {
@@ -871,6 +1165,16 @@ function renderNuevaReserva() {
   
   document.getElementById('resDate').min = min.toISOString().split('T')[0];
   document.getElementById('resDate').max = max.toISOString().split('T')[0];
+
+  const isAdmin = currentUser.perfil === 'administrador' || currentUser.perfil === 'supervisor';
+  const grupo = document.getElementById('grupoResidenteAdmin');
+  const select = document.getElementById('resResidente');
+  if (isAdmin) {
+    grupo.style.display = 'block';
+    select.innerHTML = '<option value="">— Yo mismo —</option>' + usuariosLocales.filter(u => u.activo).map(u => `<option value="${u.id}">${u.nombre} (${u.apto})</option>`).join('');
+  } else {
+    grupo.style.display = 'none';
+  }
 }
 
 function checkDisponibilidad() {
@@ -906,10 +1210,12 @@ function checkDisponibilidad() {
 async function crearReserva() {
   const fecha = document.getElementById('resDate').value;
   const nombre = document.getElementById('resNombre').value.trim();
+  const tipo = document.getElementById('resTipo').value;
   const asistentes = parseInt(document.getElementById('resAsistentes').value) || 0;
   const desc = document.getElementById('resDesc').value.trim();
   const obs = document.getElementById('resObs').value.trim();
   const insumos = [...document.querySelectorAll('#insumosCheck input:checked')].map(c => c.value);
+  const residenteSeleccionado = document.getElementById('resResidente').value;
   
   hideEl('reservaError');
   
@@ -930,10 +1236,11 @@ async function crearReserva() {
   
   try {
     const resultado = await apiCall('/reservas', 'POST', {
-      userId: currentUser.id,
+      userId: residenteSeleccionado || currentUser.id,
       creadoPor: currentUser.id,
       fecha,
       nombre,
+      tipo,
       asistentes,
       descripcion: desc,
       insumos,
@@ -969,10 +1276,14 @@ function renderFiltrosMes() {
 }
 
 function renderTodasReservas() {
+  const filtroCol = document.getElementById('filtroColaborador')?.value || 'all';
   const filtroE = document.getElementById('filtroEstado').value;
   const filtroM = document.getElementById('filtroMes').value;
   
   let reservas = reservasLocales.filter(r => true);
+  if (filtroCol !== 'all') {
+    reservas = reservas.filter(r => (r.colaborador || 'principal') === filtroCol);
+  }
   if (filtroE !== 'all') reservas = reservas.filter(r => r.estado === filtroE);
   if (filtroM !== 'all') reservas = reservas.filter(r => r.fecha.startsWith(filtroM));
   
@@ -1203,6 +1514,7 @@ function renderInventario() {
   const isSup = currentUser.perfil === 'supervisor';
   
   document.getElementById('btnNuevoInsumo').style.display = (isAdmin || isSup) ? 'inline-flex' : 'none';
+  document.getElementById('alertaInsumosCriticos').textContent = inventarioLocales.filter(i => i.activo && i.cantidad <= i.minimo).length;
   
   document.getElementById('inventarioGrid').innerHTML = inventarioLocales.filter(i => i.activo).map(i => {
     const low = i.cantidad <= i.minimo;
@@ -1318,6 +1630,337 @@ function renderPerfil() {
   document.getElementById('perfilNombre').textContent = u.nombre;
   document.getElementById('perfilEmail').textContent = u.email;
   document.getElementById('perfilRoleBadge').innerHTML = `<span class="role-tag role-${u.perfil}">${u.perfil}</span>${u.apto ? ' — Apto ' + u.apto : ''}`;
+}
+
+function renderDashboardSemaforo(reservas) {
+  const hoy = new Date().toISOString().split('T')[0];
+  const proximas = reservas.filter(r => r.fecha >= hoy && r.estado === 'aprobada').length;
+  const pendientes = reservas.filter(r => r.estado === 'pendiente').length;
+  const stockCritico = inventarioLocales.filter(i => i.activo && i.cantidad <= i.minimo).length;
+  const diasReservados = new Set(reservas.filter(r => {
+    const f = new Date(r.fecha + 'T12:00:00');
+    const diff = Math.round((f - new Date(hoy + 'T00:00:00')) / (1000 * 60 * 60 * 24));
+    return diff >= 0 && diff < 30 && r.estado === 'aprobada';
+  }).map(r => r.fecha));
+  const ocupacion = Math.min(100, Math.round((diasReservados.size / 30) * 100));
+  const estado = ocupacion > 75 ? 'Crítico' : ocupacion > 45 ? 'Atención' : 'Bueno';
+
+  document.getElementById('dashSemaforo').innerHTML = `
+    <div class="card" style="margin-top:24px;">
+      <div class="card-title">Semáforo rápido</div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px;margin-top:16px">
+        <div class="sem-card sem-${ocupacion > 75 ? 'red' : ocupacion > 45 ? 'amber' : 'green'}">
+          <div style="font-size:14px;font-weight:600;margin-bottom:8px">Ocupación 30 días</div>
+          <div style="font-size:28px;font-weight:700">${ocupacion}%</div>
+          <div style="font-size:12px;color:var(--text2);margin-top:8px">${estado} — ${diasReservados.size} días reservados</div>
+        </div>
+        <div class="sem-card ${stockCritico > 0 ? 'sem-red' : 'sem-green'}">
+          <div style="font-size:14px;font-weight:600;margin-bottom:8px">Stock crítico</div>
+          <div style="font-size:28px;font-weight:700">${stockCritico}</div>
+          <div style="font-size:12px;color:var(--text2);margin-top:8px">Insumos por debajo del mínimo</div>
+        </div>
+        <div class="sem-card ${pendientes > 0 ? 'sem-amber' : 'sem-green'}">
+          <div style="font-size:14px;font-weight:600;margin-bottom:8px">Reservas pendientes</div>
+          <div style="font-size:28px;font-weight:700">${pendientes}</div>
+          <div style="font-size:12px;color:var(--text2);margin-top:8px">Solicitudes que requieren revisión</div>
+        </div>
+        <div class="sem-card ${proximas > 5 ? 'sem-red' : proximas > 2 ? 'sem-amber' : 'sem-green'}">
+          <div style="font-size:14px;font-weight:600;margin-bottom:8px">Próximas reservas</div>
+          <div style="font-size:28px;font-weight:700">${proximas}</div>
+          <div style="font-size:12px;color:var(--text2);margin-top:8px">Reservas confirmadas próximas</div>
+        </div>
+      </div>
+    </div>`;
+}
+
+function renderSemaforo() {
+  const reservas = DBGet('reservas');
+  const hoy = new Date().toISOString().split('T')[0];
+  const filtro = document.getElementById('filtroSemaforo')?.value || 'all';
+
+  const filas = reservas.map(r => {
+    const diff = Math.round((new Date(r.fecha + 'T12:00:00') - new Date(hoy + 'T00:00:00')) / (1000 * 60 * 60 * 24));
+    const nivel = r.estado !== 'aprobada' ? 'red' : diff <= 3 ? 'red' : diff <= 7 ? 'amber' : 'green';
+    return { ...r, diff, nivel };
+  }).filter(r => r.estado === 'aprobada').sort((a, b) => a.diff - b.diff);
+
+  const visibles = filtro === 'all' ? filas : filas.filter(r => r.nivel === filtro);
+  const filtroTexto = filtro === 'all' ? 'Todas las reservas' : filtro === 'red' ? 'Urgentes' : filtro === 'amber' ? 'Próximas' : 'OK';
+
+  const urgentes = filas.filter(r => r.nivel === 'red').length;
+  const proximas = filas.filter(r => r.nivel === 'amber').length;
+  const ok = filas.filter(r => r.nivel === 'green').length;
+
+  let html = `
+    <div class="semaphore-summary" style="display:grid;grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));gap:16px;padding:10px;">
+     
+    </div>
+  `;
+
+  if (visibles.length === 0) {
+    html += '<div class="empty-state"><div class="empty-icon">📭</div><div class="empty-text">No hay reservas aprobadas para el filtro seleccionado.</div></div>';
+  } else {
+    html += '<div style="display:grid;grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));gap:16px;padding:10px;">';
+    visibles.forEach(r => {
+      const usuario = usuariosLocales.find(u => u.id === r.userId) || { nombre: 'Desconocido', apto: '—' };
+      const estado_color = r.nivel === 'red' ? '#ef4444' : r.nivel === 'amber' ? '#f59e0b' : '#10b981';
+      const estado_label = r.nivel === 'red' ? 'URGENTE' : r.nivel === 'amber' ? 'PRÓXIMO' : 'OK';
+      
+      html += `
+        <div class="sem-card" style="display: grid; grid-template-columns: repeat(auto-fill,minmax(240px,1fr));gap: 16px; border-left:6px solid ${estado_color}; cursor:pointer; transition:all 0.2s;" onmouseover="this.style.transform='translateY(-2px); box-shadow: 0 8px 16px rgba(0,0,0,0.2)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'"> 
+          <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:12px;">
+            <div>
+              <div style="font-weight:600; font-size:14px; color:var(--text); margin-bottom:2px">${usuario.nombre}</div>
+              <div style="font-size:12px; color:var(--text2)">Apto ${usuario.apto}</div>
+            </div>
+            <span style="background:${estado_color}; color:#fff; padding:4px 8px; border-radius:4px; font-size:10px; font-weight:600;">${estado_label}</span>
+          </div>
+          <div style="background:var(--bg2); padding:8px; border-radius:6px; margin-bottom:12px;">
+            <div style="font-size:13px; font-weight:500; color:var(--text); margin-bottom:2px">${r.nombre}</div>
+            <div style="font-size:12px; color:var(--text2)">${r.tipo || 'Otro'}</div>
+          </div>
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px; font-size:12px; margin-bottom:8px;">
+            <div style="color:var(--text2)">
+              <div style="font-size:10px; color:var(--text3); text-transform:uppercase; margin-bottom:2px">Fecha</div>
+              <div style="color:var(--text); font-weight:500">${formatDate(r.fecha)}</div>
+            </div>
+            <div style="color:var(--text2);">
+              <div style="font-size:10px; color:var(--text3); text-transform:uppercase; margin-bottom:2px">Asistentes</div>
+              <div style="color:var(--text); font-weight:500">${r.asistentes || 0}</div>
+            </div>
+          </div>
+          <div style="border-top:1px solid var(--border); padding-top:8px; font-size:12px;">
+            <div style="color:var(--text2);">
+              <span style="font-weight:600; color:${estado_color}">${r.diff > 0 ? r.diff : 'Hoy'}</span>
+              ${r.diff === 1 ? ' día' : ' días'}
+              ${r.diff >= 0 ? 'próximo' : 'pasado'}
+            </div>
+          </div>
+        </div>
+      `;
+    });
+    html += '</div>';
+  }
+
+  document.getElementById('semaforoGrid').innerHTML = html;
+}
+
+function renderInformes() {
+  const totalReservas = reservasLocales.length;
+  const totalUsuarios = usuariosLocales.filter(u => u.activo).length;
+  const stockCritico = inventarioLocales.filter(i => i.activo && i.cantidad <= i.minimo).length;
+  const hoy = new Date();
+  const mesActual = `${hoy.getFullYear()}-${String(hoy.getMonth() + 1).padStart(2, '0')}`;
+  const reservasMes = reservasLocales.filter(r => r.fecha.startsWith(mesActual)).length;
+  const tipos = reservasLocales.reduce((acc, r) => { acc[r.tipo || 'otro'] = (acc[r.tipo || 'otro'] || 0) + 1; return acc; }, {});
+  const ranking = Object.entries(tipos).sort((a, b) => b[1] - a[1]).slice(0, 4);
+
+  document.getElementById('informesCards').innerHTML = `
+    <button class="report-btn"><span class="report-icon">📅</span><div><div class="report-name">${totalReservas}</div><div class="report-desc">Reservas totales</div></div></button>
+    <button class="report-btn"><span class="report-icon">📈</span><div><div class="report-name">${reservasMes}</div><div class="report-desc">Reservas este mes</div></div></button>
+    <button class="report-btn"><span class="report-icon">👥</span><div><div class="report-name">${totalUsuarios}</div><div class="report-desc">Usuarios activos</div></div></button>
+    <button class="report-btn"><span class="report-icon">⚠️</span><div><div class="report-name">${stockCritico}</div><div class="report-desc">Artículos en alerta</div></div></button>
+  `;
+
+  document.getElementById('informesDetalle').innerHTML = `
+    <div style="display:grid;gap:10px">
+      <div><strong>Mes actual:</strong> ${reservasMes} reservas</div>
+      <div><strong>Stock en alerta:</strong> ${stockCritico} artículos</div>
+      <div><strong>Top tipos de evento:</strong></div>
+      <ul style="margin:6px 0 0 16px;color:var(--text2)">${ranking.map(([tipo, cantidad]) => `<li>${tipo}: ${cantidad}</li>`).join('') || '<li>Sin datos</li>'}</ul>
+    </div>
+  `;
+}
+
+function renderBitacora() {
+  const reservas = DBGet('reservas');
+  const filtroAnio = document.getElementById('bitacoraFiltroAnio').value;
+  const filtroEstado = document.getElementById('bitacoraFiltroEstado').value;
+  const filtroTipo = document.getElementById('bitacoraFiltroTipo').value;
+  const hoy = new Date().toISOString().split('T')[0];
+
+  const años = [...new Set(reservas.map(r => r.fecha.slice(0, 4)))].sort().reverse();
+  document.getElementById('bitacoraFiltroAnio').innerHTML = '<option value="all">Todos los años</option>' + años.map(a => `<option value="${a}">${a}</option>`).join('');
+  if (filtroAnio && filtroAnio !== 'all') {
+    document.getElementById('bitacoraFiltroAnio').value = filtroAnio;
+  }
+
+  let items = reservas.slice();
+  if (filtroAnio && filtroAnio !== 'all') items = items.filter(r => r.fecha.startsWith(filtroAnio));
+  if (filtroEstado && filtroEstado !== 'all') items = items.filter(r => r.estado === filtroEstado);
+  if (filtroTipo && filtroTipo !== 'all') items = items.filter(r => (r.tipo || 'otro') === filtroTipo);
+
+  const total = items.length;
+  const aprobadas = items.filter(r => r.estado === 'aprobada').length;
+  const pendientes = items.filter(r => r.estado === 'pendiente').length;
+  const rechazadas = items.filter(r => r.estado === 'rechazada').length;
+  const stockCritico = DBGet('inventario').filter(i => i.activo && i.cantidad <= i.minimo).length;
+
+  document.getElementById('bitacoraStats').innerHTML = `
+    <div class="stat-card blue"><div class="stat-icon">📊</div><div class="stat-val">${total}</div><div class="stat-label">Registros analizados</div></div>
+    <div class="stat-card green"><div class="stat-icon">✅</div><div class="stat-val">${aprobadas}</div><div class="stat-label">Reservas aprobadas</div></div>
+    <div class="stat-card amber"><div class="stat-icon">⏳</div><div class="stat-val">${pendientes}</div><div class="stat-label">Reservas pendientes</div></div>
+    <div class="stat-card red"><div class="stat-icon">⚠️</div><div class="stat-val">${rechazadas}</div><div class="stat-label">Reservas rechazadas</div></div>
+  `;
+
+  const labelsMeses = ['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'];
+  const meses = Array(12).fill(0);
+  const tipos = {};
+  const residentes = {};
+  const asistencias = {};
+
+  items.forEach(r => {
+    const fecha = new Date(r.fecha + 'T12:00:00');
+    meses[fecha.getMonth()] += 1;
+    const tipo = r.tipo || 'otro';
+    tipos[tipo] = (tipos[tipo] || 0) + 1;
+    const usuario = (usuariosLocales.find(u => u.id === r.userId) || { nombre: 'Desconocido' }).nombre;
+    residentes[usuario] = (residentes[usuario] || 0) + 1;
+    asistencias[tipo] = asistencias[tipo] || { total: 0, count: 0 };
+    asistencias[tipo].total += Number(r.asistentes || 0);
+    asistencias[tipo].count += 1;
+  });
+
+  renderChart('chartBitMeses', {
+    type: 'bar',
+    data: { labels: labelsMeses, datasets: [{ label: 'Reservas', data: meses, backgroundColor: 'rgba(79,156,249,0.7)'}] },
+    options: { responsive: true, plugins: { legend: { display: false } } }
+  });
+
+  renderChart('chartBitEventos', {
+    type: 'doughnut',
+    data: { labels: Object.keys(tipos), datasets: [{ label: 'Eventos', data: Object.values(tipos), backgroundColor: ['#3b82f6','#10b981','#f59e0b','#8b5cf6','#ef4444','#22c55e','#f97316']}] },
+    options: { responsive: true }
+  });
+
+  renderChart('chartBitResidentes', {
+    type: 'bar',
+    data: { labels: Object.keys(residentes), datasets: [{ label: 'Reservas', data: Object.values(residentes), backgroundColor: 'rgba(16,185,129,0.7)'}] },
+    options: { responsive: true, plugins: { legend: { display: false } } }
+  });
+
+  renderChart('chartBitTendencia', {
+    type: 'line',
+    data: { labels: ['Aprobadas','Pendientes','Rechazadas'], datasets: [{ label: 'Tendencia', data: [aprobadas, pendientes, rechazadas], borderColor: '#4f9cf9', backgroundColor: 'rgba(79,156,249,0.2)', fill: true, tension: 0.3}] },
+    options: { responsive: true }
+  });
+
+  renderChart('chartBitAsistentes', {
+    type: 'bar',
+    data: { labels: Object.keys(asistencias), datasets: [{ label: 'Asistentes promedio', data: Object.values(asistencias).map(i => i.count ? Math.round(i.total / i.count) : 0), backgroundColor: 'rgba(245,158,11,0.75)'}] },
+    options: { responsive: true, plugins: { legend: { display: false } } }
+  });
+}
+
+function renderHistorialAdmin() {
+  const historial = DBGet('historial');
+  const filtroTipo = document.getElementById('filtroHistorialTipo').value;
+  const filtroUsuario = document.getElementById('filtroHistorialUsuario').value;
+  const buscar = document.getElementById('buscarHistorial').value.toLowerCase();
+
+  const usuariosActivos = usuariosLocales.filter(u => u.activo);
+  const selectUsuario = document.getElementById('filtroHistorialUsuario');
+  selectUsuario.innerHTML = '<option value="all">Todos los usuarios</option>' + usuariosActivos.map(u => `<option value="${u.nombre}">${u.nombre} (${u.apto})</option>`).join('');
+  if (filtroUsuario && selectUsuario.querySelector(`option[value="${filtroUsuario}"]`)) {
+    selectUsuario.value = filtroUsuario;
+  }
+
+  let items = historial.slice();
+  if (filtroTipo !== 'all') items = items.filter(h => h.tipo === filtroTipo);
+  if (filtroUsuario !== 'all') items = items.filter(h => h.usuario === filtroUsuario);
+  if (buscar) items = items.filter(h => `${h.titulo} ${h.descripcion}`.toLowerCase().includes(buscar));
+
+  const container = document.getElementById('historialAdminContainer');
+  if (!items.length) {
+    container.innerHTML = '<div class="empty-state"><div class="empty-icon">📭</div><div class="empty-text">No hay registros en el historial para estos filtros.</div></div>';
+    return;
+  }
+
+  container.innerHTML = items.sort((a, b) => b.fecha.localeCompare(a.fecha)).map(h => `
+    <div class="timeline-item tl-${h.nivel}">
+      <div class="timeline-time">${formatDate(h.fecha)} — ${h.usuario}</div>
+      <div class="timeline-text"><strong>${h.titulo}</strong><div class="timeline-meta">${h.descripcion}</div></div>
+    </div>
+  `).join('');
+}
+
+function renderMiHistorial() {
+  const historial = DBGet('historial').filter(h => h.usuario === currentUser.nombre).sort((a, b) => b.fecha.localeCompare(a.fecha));
+  const container = document.getElementById('miHistorialContainer');
+  if (!historial.length) {
+    container.innerHTML = '<div class="empty-state"><div class="empty-icon">📭</div><div class="empty-text">No hay actividad personal registrada aún.</div></div>';
+    return;
+  }
+
+  container.innerHTML = historial.map(h => `
+    <div class="timeline-item tl-${h.nivel}">
+      <div class="timeline-time">${formatDate(h.fecha)}</div>
+      <div class="timeline-text"><strong>${h.titulo}</strong><div class="timeline-meta">${h.descripcion}</div></div>
+    </div>
+  `).join('');
+}
+
+function renderChart(id, config) {
+  if (charts[id]) {
+    charts[id].destroy();
+  }
+  const ctx = document.getElementById(id);
+  if (!ctx) return;
+  charts[id] = new Chart(ctx, config);
+}
+
+function downloadReport(tipo) {
+  const tablerows = [];
+  let filename = `reporte-${tipo}-${new Date().toISOString().slice(0,10)}.csv`;
+
+  if (tipo === 'reservas') {
+    tablerows.push(['Fecha','Residente','Evento','Tipo','Asistentes','Estado','Apto','Comentario']);
+    DBGet('reservas').forEach(r => {
+      const usuario = usuariosLocales.find(u => u.id === r.userId) || { nombre: 'Desconocido', apto: '—' };
+      tablerows.push([r.fecha, usuario.nombre, r.nombre, r.tipo || 'Otro', r.asistentes || 0, r.estado, usuario.apto || '—', (r.comentario || r.obs || '').replace(/\r?\n/g, ' ')]);
+    });
+  } else if (tipo === 'usuarios') {
+    tablerows.push(['Nombre','Email','Perfil','Apto','Teléfono','Estado']);
+    DBGet('usuarios').forEach(u => {
+      tablerows.push([u.nombre, u.email, u.perfil, u.apto || '—', u.telefono || '—', u.activo ? 'Activo' : 'Inactivo']);
+    });
+  } else if (tipo === 'inventario') {
+    tablerows.push(['Artículo','Cantidad','Mínimo','Activo','Observaciones']);
+    DBGet('inventario').forEach(i => {
+      tablerows.push([i.nombre, i.cantidad, i.minimo, i.activo ? 'Sí' : 'No', i.obs || '']);
+    });
+  } else if (tipo === 'pendientes') {
+    tablerows.push(['Fecha','Residente','Evento','Tipo','Asistentes','Comentario']);
+    DBGet('reservas').filter(r => r.estado === 'pendiente').forEach(r => {
+      const usuario = usuariosLocales.find(u => u.id === r.userId) || { nombre: 'Desconocido' };
+      tablerows.push([r.fecha, usuario.nombre, r.nombre, r.tipo || 'Otro', r.asistentes || 0, (r.comentario || r.obs || '').replace(/\r?\n/g, ' ')]);
+    });
+  } else if (tipo === 'semaforo') {
+    tablerows.push(['Fecha','Residente','Evento','Estado','Días restantes']);
+    const hoyDate = new Date(new Date().toISOString().split('T')[0] + 'T00:00:00');
+    DBGet('reservas').filter(r => r.estado === 'aprobada').forEach(r => {
+      const fecha = new Date(r.fecha + 'T12:00:00');
+      const dias = Math.round((fecha - hoyDate) / (1000 * 60 * 60 * 24));
+      const usuario = usuariosLocales.find(u => u.id === r.userId) || { nombre: 'Desconocido' };
+      tablerows.push([r.fecha, usuario.nombre, r.nombre, dias <= 3 ? 'Urgente' : dias <= 7 ? 'Próximo' : 'OK', dias]);
+    });
+  } else if (tipo === 'historial') {
+    tablerows.push(['Fecha','Usuario','Tipo','Título','Descripción']);
+    DBGet('historial').forEach(h => {
+      tablerows.push([h.fecha, h.usuario, h.tipo, h.titulo, h.descripcion.replace(/\r?\n/g, ' ')]);
+    });
+  }
+
+  const csvContent = tablerows.map(r => r.map(c => `"${String(c).replace(/"/g, '""')}"`).join(',')).join('\r\n');
+  const blob = new Blob(['\uFEFF' + csvContent], { type: 'text/csv;charset=utf-8;' });
+  const link = document.createElement('a');
+  link.href = URL.createObjectURL(blob);
+  link.setAttribute('download', filename);
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+  logActivity('informes', `Descarga de reporte ${tipo}`, `Se descargó el reporte ${tipo}`, 'info');
+  showNotif('Reporte descargado: ' + filename, 'success');
 }
 
 async function cambiarPassword() {
