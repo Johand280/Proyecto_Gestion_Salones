@@ -363,7 +363,6 @@ canvas{max-width:100%;height:220px !important}
         <div class="nav-item active" id="nav-dashboard" onclick="goPanel('dashboard')"><span class="nav-icon">📊</span> Dashboard</div>
         <div class="nav-item" id="nav-reservas" onclick="goPanel('reservas')"><span class="nav-icon">📅</span> Mis Reservas</div>
         <div class="nav-item" id="nav-nuevaReserva" onclick="goPanel('nuevaReserva')"><span class="nav-icon">➕</span> Nueva Reserva</div>
-        <div class="nav-item" id="nav-calendario" onclick="goPanel('calendario')"><span class="nav-icon">🗓️</span> Calendario</div>
       </div>
       <div class="nav-section" id="navAdmin">
         <div class="nav-section-title">Administración</div>
